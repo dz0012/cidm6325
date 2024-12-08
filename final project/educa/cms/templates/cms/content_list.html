@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+</head>
+<body>
+    <h1>Student Portfolio</h1>
+    <a href="{% url 'content_upload' %}">Add New Content</a>
+    <ul>
+        {% for content in contents %}
+            <li>
+                <h2>{{ content.title }}</h2>
+                <p>{{ content.text }}</p>
+                {% if content.file %}
+                    <a href="{{ content.file.url }}">Download File</a>
+                {% endif %}
+                {% if content.image %}
+                    <img src="{{ content.image.url }}" alt="{{ content.title }}" width="200">
+                {% endif %}
+                {% if content.video_link %}
+                    <a href="{{ content.video_link }}" target="_blank">Watch Video</a>
+                {% endif %}
+                <br>
+                <a href="{% url 'content_edit' content.pk %}">Edit</a> | 
+                <a href="{% url 'content_delete' content.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock %}
