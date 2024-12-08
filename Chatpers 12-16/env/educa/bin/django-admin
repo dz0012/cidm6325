@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/danzelbarber/Documents/Documents - Danzel’s MacBook Pro/Chatpers 12-16/env/educa/bin/python3" "$0" "$@"
+'''exec' "/Users/danzelbarber/Documents/CIDM6325/Chatpers 12-16/env/educa/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

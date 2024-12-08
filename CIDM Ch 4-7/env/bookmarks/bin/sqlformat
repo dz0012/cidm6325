@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/danzelbarber/Documents/CIDM Ch 4-7/env/bookmarks/bin/python" "$0" "$@"
+'''exec' "/Users/danzelbarber/Documents/CIDM6325/CIDM Ch 4-7/env/bookmarks/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
